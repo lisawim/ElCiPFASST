@@ -1,4 +1,4 @@
-pyElCiPFASST provides a library for using PFASST applied on electrical circuits.
+[pyElCiPFASST](https://github.com/lisawim/pyElCiPFASST) provides a library for using PFASST applied on electrical circuits.
 
 You can use the [editor on GitHub](https://github.com/lisawim/pyElCiPFASST/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
