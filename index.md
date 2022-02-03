@@ -3,7 +3,7 @@
 This website provides a detailed tutorial, in which energy systems are explained and applied using the parallel full approximation scheme in space and time (PFASST).
 
 
-## Contents
+# Contents
 
 - [Installation](installation.md)  
 
