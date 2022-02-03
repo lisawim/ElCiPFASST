@@ -5,8 +5,6 @@ This website provides a detailed tutorial, in which energy systems are explained
 
 [[_TOC_]]
 
-## [Installation]
+## [Installation](installation.md)
 
 ## [Tutorial](tutorial.md)
-
-Second section content
