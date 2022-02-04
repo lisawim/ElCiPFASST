@@ -1,1 +1,1 @@
-# pyElCiPFASST
+# ElCiPFASST
