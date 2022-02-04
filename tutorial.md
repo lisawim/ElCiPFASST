@@ -1,4 +1,3 @@
-title: "Tutorial"
-permalink: /tutorial/
+# Tutorial
 
 1. [Basics of Microgrid](tutorial/basics.md)
