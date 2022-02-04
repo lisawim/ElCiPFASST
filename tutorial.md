@@ -2,4 +2,4 @@
 title: Tutorial
 ---
 
-1. [Basics of Microgrid](tutorial/basics.md)
+- [1. Components of a DC Microgrid](tutorial/basics.md)
