@@ -1,3 +1,3 @@
 ## Tutorial
 
-[Basics of Microgrid](tutorial/basics.md)
+1. [Basics of Microgrid](tutorial/basics.md)
