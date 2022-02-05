@@ -1,7 +1,4 @@
----
-title: Tutorial
-permalink: /tutorial/components/
----
+# Tutorial
 
 * [1. Components of a DC Microgrid](tutorial/components.md)
   * [1.1 Pi-model transmission line](tutorial/components.html#11-pi-model-transmission-line)
