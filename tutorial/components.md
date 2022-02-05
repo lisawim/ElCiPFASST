@@ -6,12 +6,12 @@ permalink: /tutorial/
 
 ---
 layout: page
-subtitle: 1.1 Pi-model transmission line
+title: 1.1 Pi-model transmission line
 permalink: /tutorial/
 ---
 
 ---
 layout: page
-subtitle: 1.2 Step-down (buck) converter
+title: 1.2 Step-down (buck) converter
 permalink: /tutorial/
 ---
