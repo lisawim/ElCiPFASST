@@ -6,7 +6,7 @@ In order to understand how a DC microgrid works, we take a look to their constru
 ### 1.1 Pi-model transmission line
 
 <p align="center">
-  <img width = "650" height = "450" src="piline.png">
+  <img width = "650" height = "350" src="piline.png">
 </p>
 
 ### 1.2 Step-down (buck) converter
