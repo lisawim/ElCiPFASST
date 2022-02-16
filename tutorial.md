@@ -1,3 +1,8 @@
+--- 
+header-includes: |
+    \usepackage{circuitikz}
+---
+
 # Tutorial
 
 ## 1. Components of a DC Microgrid
