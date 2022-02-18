@@ -14,7 +14,7 @@ The Pi-model line serves as a connection between each power component in the mic
 ### 1.2 Step-down (buck) converter
 
 <p align="center">
-  <img width = "650" height = "350" src="buckconverter.png">
+  <img width = "650" height = "400" src="buckconverter.png">
 </p>
 
 The figure above shows a simplification of a buck (step-down) converter.
