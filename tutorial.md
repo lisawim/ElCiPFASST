@@ -11,7 +11,7 @@ In this first chapter of the tutorial, the DC microgrid will be explained and or
 
 The Pi-model line serves as a connection between each power component in the microgrid. The circuit describing the Pi-model line can be seen above and consists of two capacitors, two resistors and an inductor. Here, a voltage source is also added. Later, this circuit is connected to other ODEs describing _DC/DC converters_ and source of voltage will be provided by a battery.
 
-### 1.2 Step-down (buck) converter
+### 1.2 Buck (step-down) converter
 
 <p align="center">
   <img width = "800" height = "350" src="buckconverter.png">
