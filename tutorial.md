@@ -113,5 +113,11 @@ As in the case of the Pi-model line, the ODE system of the first state of the bu
 and solution vector
 
 <p align="center">
-    <img src="https://latex.codecogs.com/svg.image?u(t)=\begin{pmatrix}&space;v_{C_{1}}(t)\\&space;v_{C_{2}}(t)\\&space;&space;&space;&space;&space;&space;i_{L_{\pi}}(t)\end{pmatrix}" title="https://latex.codecogs.com/svg.image?u(t)=\begin{pmatrix} v_{C_{1}}(t)\\ v_{C_{2}}(t)\\ i_{L_{\pi}}(t)\end{pmatrix}" />
+    <img src="https://latex.codecogs.com/svg.image?u(t)=\begin{pmatrix}&space;v_{C_{1}}(t)\\&space;v_{C_{2}}(t)\\&space;&space;&space;&space;&space;&space;i_{L_{\pi}}(t)\end{pmatrix}." title="https://latex.codecogs.com/svg.image?u(t)=\begin{pmatrix} v_{C_{1}}(t)\\ v_{C_{2}}(t)\\ i_{L_{\pi}}(t)\end{pmatrix}." />
   </p>
+
+Switching to the second state means that the switches have the states <img src="https://latex.codecogs.com/svg.image?S_1&space;=&space;0" title="https://latex.codecogs.com/svg.image?S_1 = 0" /> and <img src="https://latex.codecogs.com/svg.image?S_2&space;=&space;1" title="https://latex.codecogs.com/svg.image?S_2 = 1" />, which yields the circuit:
+
+<p align="center">
+  <img width = "800" height = "350" src="buck_second_state.png">
+</p>
