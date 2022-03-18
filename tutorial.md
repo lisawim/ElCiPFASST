@@ -16,7 +16,7 @@ Another important relations are those for capacitors and inductors. First, the r
   <img src="https://latex.codecogs.com/svg.image?I(t)=C\dfrac{dV(t)}{dt}," title="https://latex.codecogs.com/svg.image?I(t)=C\dfrac{dV(t)}{dt}," />
 </p>
 
-where the voltage and the current are assumend to be time-dependent on time <img src="https://latex.codecogs.com/svg.image?t" title="https://latex.codecogs.com/svg.image?t" /> and <img src="https://latex.codecogs.com/svg.image?C" title="https://latex.codecogs.com/svg.image?C" /> ist the capacitance of the capacitor. For the last circuit element that is considered, the relation is also using a derivative with respect to time t:
+where the voltage and the current are assumend to be time-dependent on time <img src="https://latex.codecogs.com/svg.image?t" title="https://latex.codecogs.com/svg.image?t" /> and <img src="https://latex.codecogs.com/svg.image?C" title="https://latex.codecogs.com/svg.image?C" /> ist the capacitance of the capacitor. For the last circuit element that is considered, the relation is also using a derivative with respect to time <img src="https://latex.codecogs.com/svg.image?t" title="https://latex.codecogs.com/svg.image?t" />:
 
 <p align="center">
   <img src="https://latex.codecogs.com/svg.image?\dfrac{dI(t)}{dt}=\dfrac{1}{L}V(t)," title="https://latex.codecogs.com/svg.image?\dfrac{dI(t)}{dt}=\dfrac{1}{L}V(t)," />
@@ -33,7 +33,20 @@ In the second chapter of the tutorial, the DC microgrid will be explained and or
   <img width = "650" height = "350" src="piline.png">
 </p>
 
-The Pi-model line serves as a connection between each power component in the microgrid. The circuit describing the Pi-model line can be seen above and consists of two capacitors, two resistors and an inductor. Here, a voltage source is also added. Later, this circuit is connected to other ODEs describing _DC/DC converters_ and source of voltage will be provided by a battery.
+The Pi-model line serves as a connection between each power component in the microgrid. The circuit describing the Pi-model line can be seen above and consists of two capacitors, two resistors and an inductor. Here, a voltage source is also added. Later, this circuit is connected to other ODEs describing _DC/DC converters_ and source of voltage will be provided by a battery. 
+
+In a simulation, the interesting values are the voltages of the capacitors and the current of the inductor. These values namely have a relation containing a derivative. For a construction of an ODE system to simulate the Pi-model line, the _Kirchhoff's laws_ provides important regularities in an electrical circuit. The Pi-line satisfies the following:
+
+**Kirchhoff's Current Law**:
+- for node <img src="https://latex.codecogs.com/svg.image?v_{0}" title="https://latex.codecogs.com/svg.image?v_{0}" />: <img src="https://latex.codecogs.com/svg.image?i_{V_{s}}(t)-i_{R_{s}}(t)&space;=&space;0" title="https://latex.codecogs.com/svg.image?i_{V_{s}}(t)-i_{R_{s}}(t) = 0" />
+- for node <img src="https://latex.codecogs.com/svg.image?v_{1}" title="https://latex.codecogs.com/svg.image?v_{1}" />: <img src="https://latex.codecogs.com/svg.image?i_{R_{s}}(t)-i_{C_{1}}(t)-i_{R_{\pi}}(t)=0" title="https://latex.codecogs.com/svg.image?i_{R_{s}}(t)-i_{C_{1}}(t)-i_{R_{\pi}}(t)=0" />
+- for node <img src="https://latex.codecogs.com/svg.image?v_{2}" title="https://latex.codecogs.com/svg.image?v_{2}" />: <img src="https://latex.codecogs.com/svg.image?i_{R_{\pi}}(t)-i_{L_{\pi}}(t)=0" title="https://latex.codecogs.com/svg.image?i_{R_{\pi}}(t)-i_{L_{\pi}}(t)=0" />
+- for node <img src="https://latex.codecogs.com/svg.image?v_{3}" title="https://latex.codecogs.com/svg.image?v_{3}" />: <img src="https://latex.codecogs.com/svg.image?i_{L_{\pi}}(t)-i_{C_{2}}(t)-i_{R_{\ell}}(t)=0" title="https://latex.codecogs.com/svg.image?i_{L_{\pi}}(t)-i_{C_{2}}(t)-i_{R_{\ell}}(t)=0" />
+
+**Kirchhoff's Voltage Law**:
+1. <img src="https://latex.codecogs.com/svg.image?V_{s}&space;(t)-V_{R_{s}}&space;(t)&space;-&space;V_{C_{1}}&space;(t)&space;=&space;0" title="https://latex.codecogs.com/svg.image?V_{s} (t)-V_{R_{s}} (t) - V_{C_{1}} (t) = 0" />
+2. <img src="https://latex.codecogs.com/svg.image?V_{C_{1}}&space;(t)&space;-&space;V_{R_{\pi}}(t)&space;-&space;V_{L_{\pi}}&space;(t)&space;-&space;V_{C_{2}}&space;(t)&space;=&space;0" title="https://latex.codecogs.com/svg.image?V_{C_{1}} (t) - V_{R_{\pi}}(t) - V_{L_{\pi}} (t) - V_{C_{2}} (t) = 0" />
+3. <img src="https://latex.codecogs.com/svg.image?V_{C_{2}}(t)&space;-&space;V_{R_{\ell}}(t)&space;=&space;0" title="https://latex.codecogs.com/svg.image?V_{C_{2}}(t) - V_{R_{\ell}}(t) = 0" />
 
 ### 2.2 Buck (step-down) converter
 
@@ -50,10 +63,10 @@ The figure above shows a simplification of a buck (step-down) converter. The buc
 Note that this circuit corresponds to the Pi-model line. Then, to model this electrical circuit, the _Kirchhoff's laws_ are used. They are:
 
 **Kirchhoff's Current Law**:
-- for node 0: <img src="https://latex.codecogs.com/svg.image?i_{V_{s}}(t)-i_{R_{s}}(t)&space;=&space;0" title="https://latex.codecogs.com/svg.image?i_{V_{s}}(t)-i_{R_{s}}(t) = 0" />
-- for node 1: <img src="https://latex.codecogs.com/svg.image?i_{R_{s}}(t)-i_{C_{1}}(t)-i_{R_{\pi}}(t)=0" title="https://latex.codecogs.com/svg.image?i_{R_{s}}(t)-i_{C_{1}}(t)-i_{R_{\pi}}(t)=0" />
-- for node 2: <img src="https://latex.codecogs.com/svg.image?i_{R_\pi}(t)-i_{L_1}(t)=0" title="https://latex.codecogs.com/svg.image?i_{R_\pi}(t)-i_{L_1}(t)=0" />
-- for node 3: <img src="https://latex.codecogs.com/svg.image?i_{L_{1}}(t)-i_{C_{2}}(t)-i_{R_{\ell}}(t)=0" title="https://latex.codecogs.com/svg.image?i_{L_{1}}(t)-i_{C_{2}}(t)-i_{R_{\ell}}(t)=0" />
+- for node <img src="https://latex.codecogs.com/svg.image?v_{0}" title="https://latex.codecogs.com/svg.image?v_{0}" />: <img src="https://latex.codecogs.com/svg.image?i_{V_{s}}(t)-i_{R_{s}}(t)&space;=&space;0" title="https://latex.codecogs.com/svg.image?i_{V_{s}}(t)-i_{R_{s}}(t) = 0" />
+- for node <img src="https://latex.codecogs.com/svg.image?v_{1}" title="https://latex.codecogs.com/svg.image?v_{1}" />: <img src="https://latex.codecogs.com/svg.image?i_{R_{s}}(t)-i_{C_{1}}(t)-i_{R_{\pi}}(t)=0" title="https://latex.codecogs.com/svg.image?i_{R_{s}}(t)-i_{C_{1}}(t)-i_{R_{\pi}}(t)=0" />
+- for node <img src="https://latex.codecogs.com/svg.image?v_{2}" title="https://latex.codecogs.com/svg.image?v_{2}" />: <img src="https://latex.codecogs.com/svg.image?i_{R_\pi}(t)-i_{L_1}(t)=0" title="https://latex.codecogs.com/svg.image?i_{R_\pi}(t)-i_{L_1}(t)=0" />
+- for node <img src="https://latex.codecogs.com/svg.image?v_{3}" title="https://latex.codecogs.com/svg.image?v_{3}" />: <img src="https://latex.codecogs.com/svg.image?i_{L_{1}}(t)-i_{C_{2}}(t)-i_{R_{\ell}}(t)=0" title="https://latex.codecogs.com/svg.image?i_{L_{1}}(t)-i_{C_{2}}(t)-i_{R_{\ell}}(t)=0" />
     
 **Kirchhoff's Voltage Law**:
 1. <img src="https://latex.codecogs.com/svg.image?V_{s}&space;(t)-V_{R_{s}}&space;(t)&space;-&space;V_{C_{1}}&space;(t)&space;=&space;0" title="https://latex.codecogs.com/svg.image?V_{s} (t)-V_{R_{s}} (t) - V_{C_{1}} (t) = 0" />
