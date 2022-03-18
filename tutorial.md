@@ -1,14 +1,14 @@
 
 # Tutorial
 
-## 1. Ohm's Law
-Before we dive in to the complex world of power systems, an important law has to be looked at and explained. It illustrates a basis for the modelling. _Ohm's law_ states that the relation between current and voltage in an object is described by
+## 1. Relation between current and voltage
+Before we dive in to the complex world of power systems, some relations between current and voltage has to be looked at and explained. It illustrates the basis for the modelling. One of the relation is _Ohm's law_, which states that the relation between current and voltage in an object is described by
 
 <p align="center">
   <img src="https://latex.codecogs.com/svg.image?I=\dfrac{V}{R}," title="https://latex.codecogs.com/svg.image?I=\dfrac{V}{R}," />
 </p>
   
-where V is the measured voltage across the object, I is the current flowing through the object and R describes the resistance. 
+where V is the measured voltage across the object (in volts), I is the current flowing through the object (in amperes) and R describes the resistance (measured in ohms). 
 
 ## 2. Components of a DC Microgrid
 In the second chapter of the tutorial, the DC microgrid will be explained and ordinary differential equations (ODE) for each component will be derived for a simulation. In order to understand how a DC microgrid works, we take a look to their construction. The main components are a _DC/DC converter_ and the _Pi-model transmission line_ (shortly: _Pi-model line_). 
