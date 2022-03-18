@@ -68,7 +68,7 @@ In a simulation, the interesting values are the voltages of the capacitors and t
 Then, the ODE system for modelling the Pi-model line is of the form <img src="https://latex.codecogs.com/svg.image?\dfrac{d}{dt}u(t)=Au(t)&plus;f(t)" title="https://latex.codecogs.com/svg.image?\dfrac{d}{dt}u(t)=Au(t)+f(t)" />  with:
 
 <p align="center">
-  <img src="https://latex.codecogs.com/svg.image?\begin{pmatrix}&space;-1/(R_{s}C_{1})&space;&&space;0&space;&&space;-1/C_{1}\\&space;0&space;&&space;-1/(R_{\ell}C_2)&space;&&space;1/C_{2}\\&space;1/L_{\pi}&space;&&space;-1/L_{\pi}&space;&&space;-R_{\pi}/L_{\pi}\\\end{pmatrix},&space;\begin{pmatrix}&space;V_{s}/(R_{s}C_{1})\\&space;0\\&space;&space;&space;&space;&space;&space;0\end{pmatrix}" title="https://latex.codecogs.com/svg.image?\begin{pmatrix} -1/(R_{s}C_{1}) & 0 & -1/C_{1}\\ 0 & -1/(R_{\ell}C_2) & 1/C_{2}\\ 1/L_{\pi} & -1/L_{\pi} & -R_{\pi}/L_{\pi}\\\end{pmatrix}, \begin{pmatrix} V_{s}/(R_{s}C_{1})\\ 0\\ 0\end{pmatrix}" />
+  <img src="https://latex.codecogs.com/svg.image?A=\begin{pmatrix}&space;-1/(R_{s}C_{1})&space;&&space;0&space;&&space;-1/C_{1}\\&space;0&space;&&space;-1/(R_{\ell}C_2)&space;&&space;1/C_{2}\\&space;1/L_{\pi}&space;&&space;-1/L_{\pi}&space;&&space;-R_{\pi}/L_{\pi}\\\end{pmatrix},&space;f(t)=\begin{pmatrix}&space;V_{s}/(R_{s}C_{1})\\&space;0\\&space;&space;&space;&space;&space;&space;0\end{pmatrix}" title="https://latex.codecogs.com/svg.image?A=\begin{pmatrix} -1/(R_{s}C_{1}) & 0 & -1/C_{1}\\ 0 & -1/(R_{\ell}C_2) & 1/C_{2}\\ 1/L_{\pi} & -1/L_{\pi} & -R_{\pi}/L_{\pi}\\\end{pmatrix}, f(t)=\begin{pmatrix} V_{s}/(R_{s}C_{1})\\ 0\\ 0\end{pmatrix}" />
 </p>
 
 and
@@ -107,7 +107,7 @@ Note that this circuit corresponds to the Pi-model line. Then, to model this ele
 As in the case of the Pi-model line, the ODE system of the first state of the buck converter has the form <img src="https://latex.codecogs.com/svg.image?\dfrac{d}{dt}u(t)=Au(t)&plus;f(t)" title="https://latex.codecogs.com/svg.image?\dfrac{d}{dt}u(t)=Au(t)+f(t)" /> with coefficient matrix and right-hand side:
 
 <p align="center">
-  <img src="https://latex.codecogs.com/svg.image?\begin{pmatrix}&space;-1/(R_{s}C_{1})&space;&&space;0&space;&&space;-1/C_{1}\\&space;0&space;&&space;-1/(R_{\ell}C_2)&space;&&space;1/C_{2}\\&space;1/L_{1}&space;&&space;-1/L_{1}&space;&&space;-R_{\pi}/L_{1}\\\end{pmatrix},&space;\begin{pmatrix}&space;V_{s}/(R_{s}C_{1})\\&space;0\\&space;&space;&space;&space;&space;&space;0\end{pmatrix}" title="https://latex.codecogs.com/svg.image?\begin{pmatrix} -1/(R_{s}C_{1}) & 0 & -1/C_{1}\\ 0 & -1/(R_{\ell}C_2) & 1/C_{2}\\ 1/L_{1} & -1/L_{1} & -R_{\pi}/L_{1}\\\end{pmatrix}, \begin{pmatrix} V_{s}/(R_{s}C_{1})\\ 0\\ 0\end{pmatrix}" />
+  <img src="https://latex.codecogs.com/svg.image?A=\begin{pmatrix}&space;-1/(R_{s}C_{1})&space;&&space;0&space;&&space;-1/C_{1}\\&space;0&space;&&space;-1/(R_{\ell}C_2)&space;&&space;1/C_{2}\\&space;1/L_{1}&space;&&space;-1/L_{1}&space;&&space;-R_{\pi}/L_{1}\\\end{pmatrix},&space;f(t)=\begin{pmatrix}&space;V_{s}/(R_{s}C_{1})\\&space;0\\&space;&space;&space;&space;&space;&space;0\end{pmatrix}" title="https://latex.codecogs.com/svg.image?A=\begin{pmatrix} -1/(R_{s}C_{1}) & 0 & -1/C_{1}\\ 0 & -1/(R_{\ell}C_2) & 1/C_{2}\\ 1/L_{1} & -1/L_{1} & -R_{\pi}/L_{1}\\\end{pmatrix}, f(t)=\begin{pmatrix} V_{s}/(R_{s}C_{1})\\ 0\\ 0\end{pmatrix}" />
 </p>
 
 and solution vector
@@ -121,3 +121,28 @@ Switching to the second state means that the switches have the states <img src="
 <p align="center">
   <img width = "800" height = "350" src="buck_second_state.png">
 </p>
+
+Modelling requires the both laws:
+
+**Kirchhoff's current law**:
+- for node <img src="https://latex.codecogs.com/svg.image?v_{0}" title="https://latex.codecogs.com/svg.image?v_{0}" />: <img src="https://latex.codecogs.com/svg.image?i_{V_{s}}(t)-i_{R_{s}}(t)&space;=&space;0" title="https://latex.codecogs.com/svg.image?i_{V_{s}}(t)-i_{R_{s}}(t) = 0" />
+- for node <img src="https://latex.codecogs.com/svg.image?v_{1}" title="https://latex.codecogs.com/svg.image?v_{1}" />: <img src="https://latex.codecogs.com/svg.image?i_{R_{s}}(t)-i_{C_{1}}(t)=0" title="https://latex.codecogs.com/svg.image?i_{R_{s}}(t)-i_{C_{1}}(t)=0" />
+- for node <img src="https://latex.codecogs.com/svg.image?v_{2}" title="https://latex.codecogs.com/svg.image?v_{2}" />: <img src="https://latex.codecogs.com/svg.image?i_{C_{1}}(t)-i_{R_{\pi}}(t)=0" title="https://latex.codecogs.com/svg.image?i_{C_{1}}(t)-i_{R_{\pi}}(t)=0" />
+- for node <img src="https://latex.codecogs.com/svg.image?v_{3}" title="https://latex.codecogs.com/svg.image?v_{3}" />: <img src="https://latex.codecogs.com/svg.image?i_{R_\pi}(t)-i_{L_1}(t)=0" title="https://latex.codecogs.com/svg.image?i_{R_\pi}(t)-i_{L_1}(t)=0" />
+- for node <img src="https://latex.codecogs.com/svg.image?v_{4}" title="https://latex.codecogs.com/svg.image?v_{4}" />: <img src="https://latex.codecogs.com/svg.image?i_{L_{1}}(t)-i_{C_{2}}(t)-i_{R_{\ell}}(t)=0" title="https://latex.codecogs.com/svg.image?i_{L_{1}}(t)-i_{C_{2}}(t)-i_{R_{\ell}}(t)=0" />
+
+**Kirchhoff's voltage law**:
+1. <img src="https://latex.codecogs.com/svg.image?V_{s}&space;(t)-V_{R_{s}}&space;(t)&space;-&space;V_{C_{1}}&space;(t)&space;=&space;0" title="https://latex.codecogs.com/svg.image?V_{s} (t)-V_{R_{s}} (t) - V_{C_{1}} (t) = 0" />
+2. <img src="https://latex.codecogs.com/svg.image?V_{R_\pi}&space;(t)&space;&plus;&space;V_{L_{1}}&space;(t)&space;&plus;&space;V_{C_{2}}&space;(t)&space;=&space;0" title="https://latex.codecogs.com/svg.image?V_{R_\pi} (t) + V_{L_{1}} (t) + V_{C_{2}} (t) = 0" />
+3. <img src="https://latex.codecogs.com/svg.image?V_{C_{2}}(t)&space;-&space;V_{R_{\ell}}(t)&space;=&space;0" title="https://latex.codecogs.com/svg.image?V_{C_{2}}(t) - V_{R_{\ell}}(t) = 0" />
+
+Finally, the ODE system is also of the form <img src="https://latex.codecogs.com/svg.image?\dfrac{d}{dt}u(t)=Au(t)&plus;f(t)" title="https://latex.codecogs.com/svg.image?\dfrac{d}{dt}u(t)=Au(t)+f(t)" /> with coefficient matrix and right-hand side:
+
+<p align="center">
+  <img src="https://latex.codecogs.com/svg.image?A=\begin{pmatrix}&space;-1/(R_{s}C_{1})&&space;0&space;&&space;0\\&space;0&space;&&space;-1/(R_{\ell}C_2)&space;&&space;1/C_{2}&space;\\&space;&space;&space;&space;&space;&space;&space;&space;&space;R_\pi&space;/\left(L_1&space;R_s\right)&space;&&space;-1/L_{1}&space;&&space;0\end{pmatrix},&space;f(t)=\begin{pmatrix}&space;V_{i}/(R_{s}C_{1})\\&space;0\\&space;&space;&space;&space;&space;&space;&space;&space;&space;-R_\pi&space;V_s&space;/\left(L_1&space;R_s\right)\end{pmatrix}&space;" title="https://latex.codecogs.com/svg.image?A=\begin{pmatrix} -1/(R_{s}C_{1})& 0 & 0\\ 0 & -1/(R_{\ell}C_2) & 1/C_{2} \\ R_\pi /\left(L_1 R_s\right) & -1/L_{1} & 0\end{pmatrix}, f(t)=\begin{pmatrix} V_{i}/(R_{s}C_{1})\\ 0\\ -R_\pi V_s /\left(L_1 R_s\right)\end{pmatrix} " />
+</p>
+
+and the vector of unknowns
+  <p align="center">
+    <img src="https://latex.codecogs.com/svg.image?u(t)=\begin{pmatrix}&space;v_{C_{1}}(t)\\&space;v_{C_{2}}(t)\\&space;&space;&space;&space;&space;&space;i_{L_{\pi}}(t)\end{pmatrix}." title="https://latex.codecogs.com/svg.image?u(t)=\begin{pmatrix} v_{C_{1}}(t)\\ v_{C_{2}}(t)\\ i_{L_{\pi}}(t)\end{pmatrix}." />
+  </p>
