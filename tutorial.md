@@ -29,6 +29,18 @@ where <img src="https://latex.codecogs.com/svg.image?L" title="https://latex.cod
 
 ### 1.2 Kirchhoff's laws 
 
+There are two laws formulated by Gustav Kirchhoff. The first law, the _current law_, states that the sum of currents flowing in a node is equal to the sum of currents flowing out of a node. Another equivalent formulation of this law is that the sum of all currents that come together at a node are zero:
+
+<p align="center">
+  <img src="https://latex.codecogs.com/svg.image?\sum_{k=1}^{n}I_{k}=0" title="https://latex.codecogs.com/svg.image?\sum_{k=1}^{n}I_{k}=0" />
+</p>
+
+The _voltage law_, which is the second of Kirchhoff's laws states that the sum of the voltages in a closed loop is zero:
+
+<p align="center">
+  <img src="https://latex.codecogs.com/svg.image?\sum_{k=1}^{n}V_{k}=0" title="https://latex.codecogs.com/svg.image?\sum_{k=1}^{n}V_{k}=0" />
+</p>
+
 ## 2. Components of a DC Microgrid
 In the second chapter of the tutorial, the DC microgrid will be explained and an ODE system for each component will be derived for a simulation. In order to understand how a DC microgrid works, we take a look to their construction. The main components are a _DC/DC converter_ and the _Pi-model transmission line_ (shortly: _Pi-model line_). 
 
