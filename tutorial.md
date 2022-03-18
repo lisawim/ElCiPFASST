@@ -8,7 +8,21 @@ Before we dive in to the complex world of power systems, some relations between 
   <img src="https://latex.codecogs.com/svg.image?I=\dfrac{V}{R}," title="https://latex.codecogs.com/svg.image?I=\dfrac{V}{R}," />
 </p>
   
-where V is the measured voltage across the object (in volts), I is the current flowing through the object (in amperes) and R describes the resistance (measured in ohms). 
+where <img src="https://latex.codecogs.com/svg.image?V" title="https://latex.codecogs.com/svg.image?V" /> is the measured voltage across the object (in volts), <img src="https://latex.codecogs.com/svg.image?I" title="https://latex.codecogs.com/svg.image?I" /> is the current flowing through the object (in amperes) and <img src="https://latex.codecogs.com/svg.image?R" title="https://latex.codecogs.com/svg.image?R" /> describes the resistance (measured in ohms). For circuit elements, this relation is applied for resistors.
+
+Another important relations are those for capacitors and inductors. First, the relation between current and voltage through a capacitor is given by
+
+<p align="center">
+  <img src="https://latex.codecogs.com/svg.image?I(t)=C\dfrac{dV(t)}{dt}," title="https://latex.codecogs.com/svg.image?I(t)=C\dfrac{dV(t)}{dt}," />
+</p>
+
+where the voltage and the current are assumend to be time-dependent on time <img src="https://latex.codecogs.com/svg.image?t" title="https://latex.codecogs.com/svg.image?t" /> and <img src="https://latex.codecogs.com/svg.image?C" title="https://latex.codecogs.com/svg.image?C" /> ist the capacitance of the capacitor. For the last circuit element that is considered, the relation is also using a derivative with respect to time t:
+
+<p align="center">
+  <img src="https://latex.codecogs.com/svg.image?\dfrac{dI(t)}{dt}=\dfrac{1}{L}V(t)," title="https://latex.codecogs.com/svg.image?\dfrac{dI(t)}{dt}=\dfrac{1}{L}V(t)," />
+</p>
+
+where <img src="https://latex.codecogs.com/svg.image?L" title="https://latex.codecogs.com/svg.image?L" /> is the inductance of the inductor.
 
 ## 2. Components of a DC Microgrid
 In the second chapter of the tutorial, the DC microgrid will be explained and ordinary differential equations (ODE) for each component will be derived for a simulation. In order to understand how a DC microgrid works, we take a look to their construction. The main components are a _DC/DC converter_ and the _Pi-model transmission line_ (shortly: _Pi-model line_). 
