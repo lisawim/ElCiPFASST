@@ -27,12 +27,12 @@ The figure above shows a simplification of a buck (step-down) converter. The buc
 Note that this circuit corresponds to the Pi-model line. Then, to model this electrical circuit, the _Kirchhoff's laws_ are used. They are:
 
 **Kirchhoff's Current Law**:
-    - for node 0: <img src="https://latex.codecogs.com/svg.image?i_{V_{s}}(t)-i_{R_{s}}(t)&space;=&space;0" title="https://latex.codecogs.com/svg.image?i_{V_{s}}(t)-i_{R_{s}}(t) = 0" />
-    - for node 1: <img src="https://latex.codecogs.com/svg.image?i_{R_{s}}(t)-i_{C_{1}}(t)-i_{R_{\pi}}(t)=0" title="https://latex.codecogs.com/svg.image?i_{R_{s}}(t)-i_{C_{1}}(t)-i_{R_{\pi}}(t)=0" />
-    - for node 2: <img src="https://latex.codecogs.com/svg.image?i_{R_\pi}(t)-i_{L_1}(t)=0" title="https://latex.codecogs.com/svg.image?i_{R_\pi}(t)-i_{L_1}(t)=0" />
-    - for node 3: <img src="https://latex.codecogs.com/svg.image?i_{L_{1}}(t)-i_{C_{2}}(t)-i_{R_{\ell}}(t)=0" title="https://latex.codecogs.com/svg.image?i_{L_{1}}(t)-i_{C_{2}}(t)-i_{R_{\ell}}(t)=0" />
+- for node 0: <img src="https://latex.codecogs.com/svg.image?i_{V_{s}}(t)-i_{R_{s}}(t)&space;=&space;0" title="https://latex.codecogs.com/svg.image?i_{V_{s}}(t)-i_{R_{s}}(t) = 0" />
+- for node 1: <img src="https://latex.codecogs.com/svg.image?i_{R_{s}}(t)-i_{C_{1}}(t)-i_{R_{\pi}}(t)=0" title="https://latex.codecogs.com/svg.image?i_{R_{s}}(t)-i_{C_{1}}(t)-i_{R_{\pi}}(t)=0" />
+- for node 2: <img src="https://latex.codecogs.com/svg.image?i_{R_\pi}(t)-i_{L_1}(t)=0" title="https://latex.codecogs.com/svg.image?i_{R_\pi}(t)-i_{L_1}(t)=0" />
+- for node 3: <img src="https://latex.codecogs.com/svg.image?i_{L_{1}}(t)-i_{C_{2}}(t)-i_{R_{\ell}}(t)=0" title="https://latex.codecogs.com/svg.image?i_{L_{1}}(t)-i_{C_{2}}(t)-i_{R_{\ell}}(t)=0" />
     
 **Kirchhoff's Voltage Law**:
-    - <img src="https://latex.codecogs.com/svg.image?V_{s}&space;(t)-V_{R_{s}}&space;(t)&space;-&space;V_{C_{1}}&space;(t)&space;=&space;0" title="https://latex.codecogs.com/svg.image?V_{s} (t)-V_{R_{s}} (t) - V_{C_{1}} (t) = 0" />
-    - <img src="https://latex.codecogs.com/svg.image?V_{C_{1}}&space;(t)&space;-&space;V_{R_\pi}(t)-&space;V_{L_{1}}&space;(t)&space;-&space;V_{C_{2}}&space;(t)&space;=&space;0" title="https://latex.codecogs.com/svg.image?V_{C_{1}} (t) - V_{R_\pi}(t)- V_{L_{1}} (t) - V_{C_{2}} (t) = 0" />
-    - <img src="https://latex.codecogs.com/svg.image?V_{C_{2}}(t)&space;-&space;V_{R_{\ell}}(t)&space;=&space;0" title="https://latex.codecogs.com/svg.image?V_{C_{2}}(t) - V_{R_{\ell}}(t) = 0" />
+1. <img src="https://latex.codecogs.com/svg.image?V_{s}&space;(t)-V_{R_{s}}&space;(t)&space;-&space;V_{C_{1}}&space;(t)&space;=&space;0" title="https://latex.codecogs.com/svg.image?V_{s} (t)-V_{R_{s}} (t) - V_{C_{1}} (t) = 0" />
+2. <img src="https://latex.codecogs.com/svg.image?V_{C_{1}}&space;(t)&space;-&space;V_{R_\pi}(t)-&space;V_{L_{1}}&space;(t)&space;-&space;V_{C_{2}}&space;(t)&space;=&space;0" title="https://latex.codecogs.com/svg.image?V_{C_{1}} (t) - V_{R_\pi}(t)- V_{L_{1}} (t) - V_{C_{2}} (t) = 0" />
+3. <img src="https://latex.codecogs.com/svg.image?V_{C_{2}}(t)&space;-&space;V_{R_{\ell}}(t)&space;=&space;0" title="https://latex.codecogs.com/svg.image?V_{C_{2}}(t) - V_{R_{\ell}}(t) = 0" />
