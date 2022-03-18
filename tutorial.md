@@ -1,10 +1,18 @@
 
 # Tutorial
 
-## 1. Components of a DC Microgrid
-In this first chapter of the tutorial, the DC microgrid will be explained and ordinary differential equations (ODE) for each component will be derived for a simulation. In order to understand how a DC microgrid works, we take a look to their construction. The main components are a _DC/DC converter_ and the _Pi-model transmission line_ (shortly: _Pi-model line_). 
+## 1. Ohm's Law
+Before we dive in to the complex world of power systems, an important law has to be looked at and explained. It illustrates a basis for the modelling. _Ohm's law_ states that the relation between current and voltage in an object is described by
 
-### 1.1 Pi-model transmission line
+<p align="center">
+  <img src="https://latex.codecogs.com/svg.image?I=\dfrac{V}{R}" title="https://latex.codecogs.com/svg.image?I=\dfrac{V}{R}" />,
+<\p>
+where V is the measured voltage across the object, I is the current flowing through the object and R describes the resistance. 
+
+## 2. Components of a DC Microgrid
+In the second chapter of the tutorial, the DC microgrid will be explained and ordinary differential equations (ODE) for each component will be derived for a simulation. In order to understand how a DC microgrid works, we take a look to their construction. The main components are a _DC/DC converter_ and the _Pi-model transmission line_ (shortly: _Pi-model line_). 
+
+### 2.1 Pi-model transmission line
 
 <p align="center">
   <img width = "650" height = "350" src="piline.png">
@@ -12,7 +20,7 @@ In this first chapter of the tutorial, the DC microgrid will be explained and or
 
 The Pi-model line serves as a connection between each power component in the microgrid. The circuit describing the Pi-model line can be seen above and consists of two capacitors, two resistors and an inductor. Here, a voltage source is also added. Later, this circuit is connected to other ODEs describing _DC/DC converters_ and source of voltage will be provided by a battery.
 
-### 1.2 Buck (step-down) converter
+### 2.2 Buck (step-down) converter
 
 <p align="center">
   <img width = "800" height = "350" src="buckconverter.png">
