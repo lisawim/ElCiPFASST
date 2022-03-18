@@ -6,7 +6,7 @@ Before we dive in to the complex world of power systems, an important law has to
 
 <p align="center">
   <img src="https://latex.codecogs.com/svg.image?I=\dfrac{V}{R}" title="https://latex.codecogs.com/svg.image?I=\dfrac{V}{R}" />
-<\p>
+</p>
   
 where V is the measured voltage across the object, I is the current flowing through the object and R describes the resistance. 
 
