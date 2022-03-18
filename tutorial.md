@@ -22,7 +22,7 @@ The Pi-model line serves as a connection between each power component in the mic
   <img width = "800" height = "350" src="buckconverter.png">
 </p>
 
-The figure above shows a simplification of a buck (step-down) converter. The buck converter converts a large input voltage in a smaller output voltage by comparing the output voltage with a predefined target output voltage. When both voltages are equal, then switches will be switch over. Note that both switches are always in opposite state to each other. In order to explain the modelling for the buck converter, first the buck converter is assumed to be in _first state_, which means the switch ´´´math $S_1=1$´´´ is open and the second switch $S_2=0$ is closed. This results in the circuit:
+The figure above shows a simplification of a buck (step-down) converter. The buck converter converts a large input voltage in a smaller output voltage by comparing the output voltage with a predefined target output voltage. When both voltages are equal, then switches will be switch over. Note that both switches are always in opposite state to each other. In order to explain the modelling for the buck converter, first the buck converter is assumed to be in _first state_, which means the switch ´´´math S_1=1 ´´´ is open and the second switch $S_2=0$ is closed. This results in the circuit:
 
 <p align="center">
   <img width = "800" height = "350" src="buck_first_state.png">
