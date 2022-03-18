@@ -1,3 +1,8 @@
+<script type="text/javascript" charset="utf-8" 
+src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML,
+https://vincenttam.github.io/javascripts/MathJaxLocal.js"></script>
+
+
 # Tutorial
 
 ## 1. Components of a DC Microgrid
