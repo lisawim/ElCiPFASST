@@ -5,7 +5,7 @@
 Before we dive in to the complex world of power systems, an important law has to be looked at and explained. It illustrates a basis for the modelling. _Ohm's law_ states that the relation between current and voltage in an object is described by
 
 <p align="center">
-  <img src="https://latex.codecogs.com/svg.image?I=\dfrac{V}{R}" title="https://latex.codecogs.com/svg.image?I=\dfrac{V}{R}" />,
+  <img src="https://latex.codecogs.com/svg.image?I=\dfrac{V}{R}" title="https://latex.codecogs.com/svg.image?I=\dfrac{V}{R}" />
 <\p>
 where V is the measured voltage across the object, I is the current flowing through the object and R describes the resistance. 
 
