@@ -151,4 +151,6 @@ and the vector of unknowns
 In the last section about the buck converter, the circuit can be in two different states. A few questions arise: Which state is the current state? When does the converter switch to the other state? In order to answer these questions and learn a little bit more about the functionality of a DC microgrid, this section deals with the controlling of the output voltage. Remember that the buck converter reduces the input voltage. Moreover, it can reduce the input voltage to a target output voltage. The controller can realise this via comparing the actual output voltage with a desired output value in every time step.  
 ### 3.1 Duty cycle
 
-`Here is a coding line`
+```python
+import numpy as np
+```
