@@ -147,6 +147,6 @@ and the vector of unknowns
     <img src="https://latex.codecogs.com/svg.image?u(t)=\begin{pmatrix}&space;v_{C_{1}}(t)\\&space;v_{C_{2}}(t)\\&space;&space;&space;&space;&space;&space;i_{L_{\pi}}(t)\end{pmatrix}." title="https://latex.codecogs.com/svg.image?u(t)=\begin{pmatrix} v_{C_{1}}(t)\\ v_{C_{2}}(t)\\ i_{L_{\pi}}(t)\end{pmatrix}." />
   </p>
 
-## Control
+## 3. Control
 In the last section about the buck converter, the circuit can be in two different states. A few questions arise: Which state is the current state? When does the converter switch to the other state? In order to answer these question and learn a little bit more about a DC microgrid, this section deals with the controlling of the output voltage. Remember that the buck converter reduces the input voltage. Moreover, it can reduce the input voltage to a target output voltage. The controller can realise this via comparing the actual output voltage with a desired output value in every time step.  
-### Duty cycle
+### 3.1 Duty cycle
