@@ -154,5 +154,5 @@ In the last section about the buck converter, the circuit can be in two differen
 The duty cycle specifies the relation between the ON-time and OFF-time of a switch. It is defined as a percentage or as relative value. Then, a duty cycle of 0.75 (or 75 %) means that the ON-time in a period accounts for 75% of the time. In ths 75% the switch is closed. In the other 25 %, the switch is closed. This process is illustrated in the picture:
 
 <p align="center">
-  <img width = "600" height = "350" src="duty.png">
+  <img width = "450" height = "350" src="duty.png">
 </p>
