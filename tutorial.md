@@ -151,8 +151,10 @@ and the vector of unknowns
 In the last section about the buck converter, the circuit can be in two different states. A few questions arise: Which state is the current state? When does the converter switch to the other state? In order to answer these questions and learn a little bit more about the functionality of a DC microgrid, this section deals with the controlling of the output voltage. Remember that the buck converter reduces the input voltage. Moreover, it can reduce the input voltage to a target output voltage. The controller can realise this via comparing the actual output voltage with a desired output value in every time step.
 
 ### 3.1 Duty cycle
-The duty cycle specifies the relation between the ON-time and OFF-time of a switch. It is defined as a percentage or as relative value. Then, a duty cycle of 0.75 (or 75%) means that the ON-time in a period accounts for 75% of the time. In tihs 75% the switch is closed. In the other 25%, the switch is closed. This process is illustrated in the picture:
+The duty cycle specifies the relation between the on-time and off-time of a switch. It is defined as a percentage or as relative value. Then, a duty cycle of 0.75 (or 75%) means that the ON-time in a period accounts for 75% of the time. In this 75% the switch is closed. In the other 25%, the switch is closed. This process is illustrated in the picture:
 
 <p align="center">
   <img width = "450" height = "350" src="duty.png">
 </p>
+
+When the switch is closed, i.e. <img src="https://latex.codecogs.com/svg.image?S&space;=&space;1" title="https://latex.codecogs.com/svg.image?S = 1" /> current flows through the switch and the voltage is zero. Otherwise, when the switch is open (<img src="https://latex.codecogs.com/svg.image?S&space;=&space;0" title="https://latex.codecogs.com/svg.image?S = 0" />), no current can flow and voltage can be measured there.
