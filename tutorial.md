@@ -157,4 +157,10 @@ The duty cycle specifies the relation between the on-time and off-time of a swit
   <img width = "450" height = "350" src="duty.png">
 </p>
 
-When the switch is closed, i.e. <img src="https://latex.codecogs.com/svg.image?S&space;=&space;1" title="https://latex.codecogs.com/svg.image?S = 1" /> current flows through the switch and the voltage is zero. Otherwise, when the switch is open (<img src="https://latex.codecogs.com/svg.image?S&space;=&space;0" title="https://latex.codecogs.com/svg.image?S = 0" />), no current can flow and voltage can be measured there.
+When the switch is closed, i.e. <img src="https://latex.codecogs.com/svg.image?S&space;=&space;1" title="https://latex.codecogs.com/svg.image?S = 1" />, current flows through the switch and the voltage is zero. Otherwise, when the switch is open (<img src="https://latex.codecogs.com/svg.image?S&space;=&space;0" title="https://latex.codecogs.com/svg.image?S = 0" />), no current can flow and voltage can be measured there.
+
+In many applications regarding power systems or power electronics simulations, the switching frequency is predefined. Assume that <img src="https://latex.codecogs.com/svg.image?f_{sw}" title="https://latex.codecogs.com/svg.image?f_{sw}" /> defines the switching frequency, then the period in which the switch state is changed is 
+
+<p align="center">
+  <img src="https://latex.codecogs.com/svg.image?T_{sw}=\dfrac{1}{f_{sw}}=T_{on}&plus;T_{off}" title="https://latex.codecogs.com/svg.image?T_{sw}=\dfrac{1}{f_{sw}}=T_{on}+T_{off}" />
+</p>
