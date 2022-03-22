@@ -164,3 +164,5 @@ In many applications regarding power systems or power electronics simulations, t
 <p align="center">
   <img src="https://latex.codecogs.com/svg.image?T_{sw}=\dfrac{1}{f_{sw}}=T_{on}&plus;T_{off}" title="https://latex.codecogs.com/svg.image?T_{sw}=\dfrac{1}{f_{sw}}=T_{on}+T_{off}" />
 </p>
+
+### 3.2 Closed-loop control
