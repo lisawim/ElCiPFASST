@@ -4,3 +4,5 @@ show_sorted: false
 ---
 
 # Tutorial
+
+{% include list.liquid %}
