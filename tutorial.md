@@ -173,3 +173,5 @@ Control the output voltage means that it has to control it regularly. At every t
 </p>
 
 where it consists of the (P)roportional part with <img src="https://latex.codecogs.com/svg.image?K_{P}" title="https://latex.codecogs.com/svg.image?K_{P}" /> being constant and an (I)ntegral part with <img src="https://latex.codecogs.com/svg.image?K_{I}" title="https://latex.codecogs.com/svg.image?K_{I}" /> also being a constant.
+
+Using the switching frequency <img src="https://latex.codecogs.com/svg.image?f_{sw}" title="https://latex.codecogs.com/svg.image?f_{sw}" /> and the time step <img src="https://latex.codecogs.com/svg.image?\Delta&space;t" title="https://latex.codecogs.com/svg.image?\Delta t" />, the duty cycle is recalculated every time after <img src="https://latex.codecogs.com/svg.image?\dfrac{1}{f_{sw}\Delta&space;t}" title="https://latex.codecogs.com/svg.image?\dfrac{1}{f_{sw}\Delta t}" /> time steps. In other words: When time t is equal to a integer multiple of <img src="https://latex.codecogs.com/svg.image?T_{sw}," title="https://latex.codecogs.com/svg.image?T_{sw}," /> the duty cycle will be recalculated.  
