@@ -2,7 +2,7 @@
 sort: 1
 ---
 
-# Tutorial
+# DC Microgrid
 
 ## 1. Basics
 Before we dive in to the complex world of power systems, some theory about electrical circuits has to be looked at and explained. Relations between current and voltage for circuit elements provide the fundamentals for a derivation of a system of ordinary differential equations (ODE). Furthermore, _Kirchhoff's laws_ are needed to describe the connections of currents and voltages in a circuit. 
