@@ -1,2 +1,5 @@
 remote_theme: rundocs/jekyll-rtd-theme
 markdown: kramdown
+
+readme_index:
+  with_frontmatter: true
