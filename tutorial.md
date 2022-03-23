@@ -166,3 +166,10 @@ In many applications regarding power systems or power electronics simulations, t
 </p>
 
 ### 3.2 Closed-loop control
+Control the output voltage means that it has to control it regularly. At every time the output voltage is compared with a target value at every time by calculating the error <img src="https://latex.codecogs.com/svg.image?e(t)=V_{target}(t)-V_{out}(t)" title="https://latex.codecogs.com/svg.image?e(t)=V_{target}(t)-V_{out}(t)" />. Then, on specific times the duty cycle is recalculated to adapt the output in the direction to this target value. The controlling process is done by a controller. There are different controllers, but the tutorial restricts to the PI controller. PI defines the components used for a recalculation of the duty cycle:
+
+<p align="center">
+  <img src="https://latex.codecogs.com/svg.image?d(t)=K_{P}e(t)&plus;K_{I}\int_{0}^{t}e(\tau)d\tau," title="https://latex.codecogs.com/svg.image?d(t)=K_{P}e(t)+K_{I}\int_{0}^{t}e(\tau)d\tau," />
+</p>
+
+where <img src="https://latex.codecogs.com/svg.image?K_{P}e(t)" title="https://latex.codecogs.com/svg.image?K_{P}e(t)" /> is the (P)roportional part with <img src="https://latex.codecogs.com/svg.image?K_{P}" title="https://latex.codecogs.com/svg.image?K_{P}" /> being constant and <img src="https://latex.codecogs.com/svg.image?K_{I}\int_{0}^{t}e(\tau)d\tau" title="https://latex.codecogs.com/svg.image?K_{I}\int_{0}^{t}e(\tau)d\tau" /> is the (I)ntegral part with <img src="https://latex.codecogs.com/svg.image?K_{I}" title="https://latex.codecogs.com/svg.image?K_{I}" /> also being a constant.
