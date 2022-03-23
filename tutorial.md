@@ -180,5 +180,5 @@ Using the switching frequency <img src="https://latex.codecogs.com/svg.image?f_{
 After explanation of important basics and components for a DC microgrid, it will be shown how the DC microgrid is composed (for the project). A schematic of the microgrid can be seen in the figure:
 
 <p align="center">
-  <img width = "550" height = "350" src="dc_microgrid.png">
+  <img width = "525" height = "350" src="dc_microgrid.png">
 </p>
