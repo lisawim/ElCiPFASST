@@ -154,10 +154,14 @@ and the vector of unknowns
 ### 2.3 Battery drain model
 
 <p align="center">
-  <img width = "800" height = "350" src="battery.png">
+  <img width = "600" height = "350" src="battery.png">
 </p>
 
-The battery drain model is an example for internal switch. Switching is a discrete event, and discrete events are important to observe and investigate, because they can influence the behavior of the simulation in a crucial way. 
+The battery drain model is an example for internal switch. Switching is a discrete event, and discrete events are important to observe and investigate, because they can influence the behavior of the simulation in a crucial way. Furthermore, it could be a big difference if it is known when the event takes place or not. In the case of the battery drain model, this time point is not known: In the beginning, the capacitor supplies voltage as long as their voltage is about a reference value. When it drops below this reference voltage, a switch connect to the voltage source. In summary, the switch depends on the inner behavior of the battery. The first state, in which the capacitor provides energy, is:
+
+<p align="center">
+  <img width = "600" height = "350" src="battery_first_state.png">
+</p>
 
 ## 3. Control
 In the last section about the buck converter, the circuit can be in two different states. A few questions arise: Which state is the current state? When does the converter switch to the other state? In order to answer these questions and learn a little bit more about the functionality of a DC microgrid, this section deals with the controlling of the output voltage. Remember that the buck converter reduces the input voltage. Moreover, it can reduce the input voltage to a target output voltage. The controller can realise this via comparing the actual output voltage with a desired output value in every time step.
