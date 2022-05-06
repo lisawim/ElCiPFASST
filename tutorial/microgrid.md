@@ -150,6 +150,14 @@ and the vector of unknowns
   <p align="center">
     <img src="https://latex.codecogs.com/svg.image?u(t)=\begin{pmatrix}&space;v_{C_{1}}(t)\\&space;v_{C_{2}}(t)\\&space;&space;&space;&space;&space;&space;i_{L_{\pi}}(t)\end{pmatrix}." title="https://latex.codecogs.com/svg.image?u(t)=\begin{pmatrix} v_{C_{1}}(t)\\ v_{C_{2}}(t)\\ i_{L_{\pi}}(t)\end{pmatrix}." />
   </p>
+  
+### 2.3 Battery drain model
+
+<p align="center">
+  <img width = "800" height = "350" src="battery.png">
+</p>
+
+The battery drain model is an example for internal switch. Switching is a discrete event, and discrete events are important to observe and investigate, because they can influence the behavior of the simulation in a crucial way. 
 
 ## 3. Control
 In the last section about the buck converter, the circuit can be in two different states. A few questions arise: Which state is the current state? When does the converter switch to the other state? In order to answer these questions and learn a little bit more about the functionality of a DC microgrid, this section deals with the controlling of the output voltage. Remember that the buck converter reduces the input voltage. Moreover, it can reduce the input voltage to a target output voltage. The controller can realise this via comparing the actual output voltage with a desired output value in every time step.
