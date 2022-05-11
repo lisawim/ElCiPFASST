@@ -59,15 +59,15 @@ The Pi-model line serves as a connection between each power component in the mic
 In a simulation, the interesting values are the voltages of the capacitors and the current of the inductor. These values namely have a relation containing a derivative. For a construction of an ODE system to simulate the Pi-model line, the _Kirchhoff's laws_ provides important regularities in an electrical circuit. The Pi-line satisfies the following:
 
 **Kirchhoff's current law**:
-- for node <img src="https://latex.codecogs.com/svg.image?v_{0}" title="https://latex.codecogs.com/svg.image?v_{0}" />: <img src="https://latex.codecogs.com/svg.image?i_{V_{s}}(t)-i_{R_{s}}(t)&space;=&space;0" title="https://latex.codecogs.com/svg.image?i_{V_{s}}(t)-i_{R_{s}}(t) = 0" />
-- for node <img src="https://latex.codecogs.com/svg.image?v_{1}" title="https://latex.codecogs.com/svg.image?v_{1}" />: <img src="https://latex.codecogs.com/svg.image?i_{R_{s}}(t)-i_{C_{1}}(t)-i_{R_{\pi}}(t)=0" title="https://latex.codecogs.com/svg.image?i_{R_{s}}(t)-i_{C_{1}}(t)-i_{R_{\pi}}(t)=0" />
-- for node <img src="https://latex.codecogs.com/svg.image?v_{2}" title="https://latex.codecogs.com/svg.image?v_{2}" />: <img src="https://latex.codecogs.com/svg.image?i_{R_{\pi}}(t)-i_{L_{\pi}}(t)=0" title="https://latex.codecogs.com/svg.image?i_{R_{\pi}}(t)-i_{L_{\pi}}(t)=0" />
-- for node <img src="https://latex.codecogs.com/svg.image?v_{3}" title="https://latex.codecogs.com/svg.image?v_{3}" />: <img src="https://latex.codecogs.com/svg.image?i_{L_{\pi}}(t)-i_{C_{2}}(t)-i_{R_{\ell}}(t)=0" title="https://latex.codecogs.com/svg.image?i_{L_{\pi}}(t)-i_{C_{2}}(t)-i_{R_{\ell}}(t)=0" />
+- for node <img src="https://latex.codecogs.com/svg.image?v_{0}" title="https://latex.codecogs.com/svg.image?v_{0}" />: <img src="https://latex.codecogs.com/svg.image?i_{V_{s}}(t)-i_{R_{s}}(t)&space;=&space;0," title="https://latex.codecogs.com/svg.image?i_{V_{s}}(t)-i_{R_{s}}(t) = 0," />
+- for node <img src="https://latex.codecogs.com/svg.image?v_{1}" title="https://latex.codecogs.com/svg.image?v_{1}" />: <img src="https://latex.codecogs.com/svg.image?i_{R_{s}}(t)-i_{C_{1}}(t)-i_{R_{\pi}}(t)=0," title="https://latex.codecogs.com/svg.image?i_{R_{s}}(t)-i_{C_{1}}(t)-i_{R_{\pi}}(t)=0," />
+- for node <img src="https://latex.codecogs.com/svg.image?v_{2}" title="https://latex.codecogs.com/svg.image?v_{2}" />: <img src="https://latex.codecogs.com/svg.image?i_{R_{\pi}}(t)-i_{L_{\pi}}(t)=0," title="https://latex.codecogs.com/svg.image?i_{R_{\pi}}(t)-i_{L_{\pi}}(t)=0," />
+- for node <img src="https://latex.codecogs.com/svg.image?v_{3}" title="https://latex.codecogs.com/svg.image?v_{3}" />: <img src="https://latex.codecogs.com/svg.image?i_{L_{\pi}}(t)-i_{C_{2}}(t)-i_{R_{\ell}}(t)=0." title="https://latex.codecogs.com/svg.image?i_{L_{\pi}}(t)-i_{C_{2}}(t)-i_{R_{\ell}}(t)=0." />
 
 **Kirchhoff's voltage law**:
-1. <img src="https://latex.codecogs.com/svg.image?V_{s}&space;(t)-V_{R_{s}}&space;(t)&space;-&space;V_{C_{1}}&space;(t)&space;=&space;0" title="https://latex.codecogs.com/svg.image?V_{s} (t)-V_{R_{s}} (t) - V_{C_{1}} (t) = 0" />
-2. <img src="https://latex.codecogs.com/svg.image?V_{C_{1}}&space;(t)&space;-&space;V_{R_{\pi}}(t)&space;-&space;V_{L_{\pi}}&space;(t)&space;-&space;V_{C_{2}}&space;(t)&space;=&space;0" title="https://latex.codecogs.com/svg.image?V_{C_{1}} (t) - V_{R_{\pi}}(t) - V_{L_{\pi}} (t) - V_{C_{2}} (t) = 0" />
-3. <img src="https://latex.codecogs.com/svg.image?V_{C_{2}}(t)&space;-&space;V_{R_{\ell}}(t)&space;=&space;0" title="https://latex.codecogs.com/svg.image?V_{C_{2}}(t) - V_{R_{\ell}}(t) = 0" />
+1. <img src="https://latex.codecogs.com/svg.image?V_{s}&space;(t)-V_{R_{s}}&space;(t)&space;-&space;V_{C_{1}}&space;(t)&space;=&space;0," title="https://latex.codecogs.com/svg.image?V_{s} (t)-V_{R_{s}} (t) - V_{C_{1}} (t) = 0," />
+2. <img src="https://latex.codecogs.com/svg.image?V_{C_{1}}&space;(t)&space;-&space;V_{R_{\pi}}(t)&space;-&space;V_{L_{\pi}}&space;(t)&space;-&space;V_{C_{2}}&space;(t)&space;=&space;0," title="https://latex.codecogs.com/svg.image?V_{C_{1}} (t) - V_{R_{\pi}}(t) - V_{L_{\pi}} (t) - V_{C_{2}} (t) = 0," />
+3. <img src="https://latex.codecogs.com/svg.image?V_{C_{2}}(t)&space;-&space;V_{R_{\ell}}(t)&space;=&space;0." title="https://latex.codecogs.com/svg.image?V_{C_{2}}(t) - V_{R_{\ell}}(t) = 0." />
 
 Then, the ODE system for modelling the Pi-model line is of the form <img src="https://latex.codecogs.com/svg.image?\dfrac{d}{dt}u(t)=Au(t)&plus;f(t)" title="https://latex.codecogs.com/svg.image?\dfrac{d}{dt}u(t)=Au(t)+f(t)" />  with:
 
@@ -98,15 +98,15 @@ The figure above shows a simplification of a buck (step-down) converter. The buc
 Note that this circuit corresponds to the Pi-model line. Then, to model this electrical circuit, the _Kirchhoff's laws_ are used. They are:
 
 **Kirchhoff's current law**:
-- for node <img src="https://latex.codecogs.com/svg.image?v_{0}" title="https://latex.codecogs.com/svg.image?v_{0}" />: <img src="https://latex.codecogs.com/svg.image?i_{V_{s}}(t)-i_{R_{s}}(t)&space;=&space;0" title="https://latex.codecogs.com/svg.image?i_{V_{s}}(t)-i_{R_{s}}(t) = 0" />
-- for node <img src="https://latex.codecogs.com/svg.image?v_{1}" title="https://latex.codecogs.com/svg.image?v_{1}" />: <img src="https://latex.codecogs.com/svg.image?i_{R_{s}}(t)-i_{C_{1}}(t)-i_{R_{\pi}}(t)=0" title="https://latex.codecogs.com/svg.image?i_{R_{s}}(t)-i_{C_{1}}(t)-i_{R_{\pi}}(t)=0" />
-- for node <img src="https://latex.codecogs.com/svg.image?v_{2}" title="https://latex.codecogs.com/svg.image?v_{2}" />: <img src="https://latex.codecogs.com/svg.image?i_{R_\pi}(t)-i_{L_1}(t)=0" title="https://latex.codecogs.com/svg.image?i_{R_\pi}(t)-i_{L_1}(t)=0" />
-- for node <img src="https://latex.codecogs.com/svg.image?v_{3}" title="https://latex.codecogs.com/svg.image?v_{3}" />: <img src="https://latex.codecogs.com/svg.image?i_{L_{1}}(t)-i_{C_{2}}(t)-i_{R_{\ell}}(t)=0" title="https://latex.codecogs.com/svg.image?i_{L_{1}}(t)-i_{C_{2}}(t)-i_{R_{\ell}}(t)=0" />
+- for node <img src="https://latex.codecogs.com/svg.image?v_{0}" title="https://latex.codecogs.com/svg.image?v_{0}" />: <img src="https://latex.codecogs.com/svg.image?i_{V_{s}}(t)-i_{R_{s}}(t)&space;=&space;0," title="https://latex.codecogs.com/svg.image?i_{V_{s}}(t)-i_{R_{s}}(t) = 0," />
+- for node <img src="https://latex.codecogs.com/svg.image?v_{1}" title="https://latex.codecogs.com/svg.image?v_{1}" />: <img src="https://latex.codecogs.com/svg.image?i_{R_{s}}(t)-i_{C_{1}}(t)-i_{R_{\pi}}(t)=0," title="https://latex.codecogs.com/svg.image?i_{R_{s}}(t)-i_{C_{1}}(t)-i_{R_{\pi}}(t)=0," />
+- for node <img src="https://latex.codecogs.com/svg.image?v_{2}" title="https://latex.codecogs.com/svg.image?v_{2}" />: <img src="https://latex.codecogs.com/svg.image?i_{R_\pi}(t)-i_{L_1}(t)=0," title="https://latex.codecogs.com/svg.image?i_{R_\pi}(t)-i_{L_1}(t)=0," />
+- for node <img src="https://latex.codecogs.com/svg.image?v_{3}" title="https://latex.codecogs.com/svg.image?v_{3}" />: <img src="https://latex.codecogs.com/svg.image?i_{L_{1}}(t)-i_{C_{2}}(t)-i_{R_{\ell}}(t)=0." title="https://latex.codecogs.com/svg.image?i_{L_{1}}(t)-i_{C_{2}}(t)-i_{R_{\ell}}(t)=0." />
     
 **Kirchhoff's voltage law**:
-1. <img src="https://latex.codecogs.com/svg.image?V_{s}&space;(t)-V_{R_{s}}&space;(t)&space;-&space;V_{C_{1}}&space;(t)&space;=&space;0" title="https://latex.codecogs.com/svg.image?V_{s} (t)-V_{R_{s}} (t) - V_{C_{1}} (t) = 0" />
-2. <img src="https://latex.codecogs.com/svg.image?V_{C_{1}}&space;(t)&space;-&space;V_{R_\pi}(t)-&space;V_{L_{1}}&space;(t)&space;-&space;V_{C_{2}}&space;(t)&space;=&space;0" title="https://latex.codecogs.com/svg.image?V_{C_{1}} (t) - V_{R_\pi}(t)- V_{L_{1}} (t) - V_{C_{2}} (t) = 0" />
-3. <img src="https://latex.codecogs.com/svg.image?V_{C_{2}}(t)&space;-&space;V_{R_{\ell}}(t)&space;=&space;0" title="https://latex.codecogs.com/svg.image?V_{C_{2}}(t) - V_{R_{\ell}}(t) = 0" />
+1. <img src="https://latex.codecogs.com/svg.image?V_{s}&space;(t)-V_{R_{s}}&space;(t)&space;-&space;V_{C_{1}}&space;(t)&space;=&space;0," title="https://latex.codecogs.com/svg.image?V_{s} (t)-V_{R_{s}} (t) - V_{C_{1}} (t) = 0," />
+2. <img src="https://latex.codecogs.com/svg.image?V_{C_{1}}&space;(t)&space;-&space;V_{R_\pi}(t)-&space;V_{L_{1}}&space;(t)&space;-&space;V_{C_{2}}&space;(t)&space;=&space;0," title="https://latex.codecogs.com/svg.image?V_{C_{1}} (t) - V_{R_\pi}(t)- V_{L_{1}} (t) - V_{C_{2}} (t) = 0," />
+3. <img src="https://latex.codecogs.com/svg.image?V_{C_{2}}(t)&space;-&space;V_{R_{\ell}}(t)&space;=&space;0." title="https://latex.codecogs.com/svg.image?V_{C_{2}}(t) - V_{R_{\ell}}(t) = 0." />
 
 As in the case of the Pi-model line, the ODE system of the first state of the buck converter has the form <img src="https://latex.codecogs.com/svg.image?\dfrac{d}{dt}u(t)=Au(t)&plus;f(t)" title="https://latex.codecogs.com/svg.image?\dfrac{d}{dt}u(t)=Au(t)+f(t)" /> with coefficient matrix and right-hand side:
 
@@ -129,16 +129,16 @@ Switching to the second state means that the switches have the states <img src="
 Modelling requires the both laws:
 
 **Kirchhoff's current law**:
-- for node <img src="https://latex.codecogs.com/svg.image?v_{0}" title="https://latex.codecogs.com/svg.image?v_{0}" />: <img src="https://latex.codecogs.com/svg.image?i_{V_{s}}(t)-i_{R_{s}}(t)&space;=&space;0" title="https://latex.codecogs.com/svg.image?i_{V_{s}}(t)-i_{R_{s}}(t) = 0" />
-- for node <img src="https://latex.codecogs.com/svg.image?v_{1}" title="https://latex.codecogs.com/svg.image?v_{1}" />: <img src="https://latex.codecogs.com/svg.image?i_{R_{s}}(t)-i_{C_{1}}(t)=0" title="https://latex.codecogs.com/svg.image?i_{R_{s}}(t)-i_{C_{1}}(t)=0" />
-- for node <img src="https://latex.codecogs.com/svg.image?v_{2}" title="https://latex.codecogs.com/svg.image?v_{2}" />: <img src="https://latex.codecogs.com/svg.image?i_{C_{1}}(t)-i_{R_{\pi}}(t)=0" title="https://latex.codecogs.com/svg.image?i_{C_{1}}(t)-i_{R_{\pi}}(t)=0" />
-- for node <img src="https://latex.codecogs.com/svg.image?v_{3}" title="https://latex.codecogs.com/svg.image?v_{3}" />: <img src="https://latex.codecogs.com/svg.image?i_{R_\pi}(t)-i_{L_1}(t)=0" title="https://latex.codecogs.com/svg.image?i_{R_\pi}(t)-i_{L_1}(t)=0" />
-- for node <img src="https://latex.codecogs.com/svg.image?v_{4}" title="https://latex.codecogs.com/svg.image?v_{4}" />: <img src="https://latex.codecogs.com/svg.image?i_{L_{1}}(t)-i_{C_{2}}(t)-i_{R_{\ell}}(t)=0" title="https://latex.codecogs.com/svg.image?i_{L_{1}}(t)-i_{C_{2}}(t)-i_{R_{\ell}}(t)=0" />
+- for node <img src="https://latex.codecogs.com/svg.image?v_{0}" title="https://latex.codecogs.com/svg.image?v_{0}" />: <img src="https://latex.codecogs.com/svg.image?i_{V_{s}}(t)-i_{R_{s}}(t)&space;=&space;0," title="https://latex.codecogs.com/svg.image?i_{V_{s}}(t)-i_{R_{s}}(t) = 0," />
+- for node <img src="https://latex.codecogs.com/svg.image?v_{1}" title="https://latex.codecogs.com/svg.image?v_{1}" />: <img src="https://latex.codecogs.com/svg.image?i_{R_{s}}(t)-i_{C_{1}}(t)=0," title="https://latex.codecogs.com/svg.image?i_{R_{s}}(t)-i_{C_{1}}(t)=0," />
+- for node <img src="https://latex.codecogs.com/svg.image?v_{2}" title="https://latex.codecogs.com/svg.image?v_{2}" />: <img src="https://latex.codecogs.com/svg.image?i_{C_{1}}(t)-i_{R_{\pi}}(t)=0," title="https://latex.codecogs.com/svg.image?i_{C_{1}}(t)-i_{R_{\pi}}(t)=0," />
+- for node <img src="https://latex.codecogs.com/svg.image?v_{3}" title="https://latex.codecogs.com/svg.image?v_{3}" />: <img src="https://latex.codecogs.com/svg.image?i_{R_\pi}(t)-i_{L_1}(t)=0," title="https://latex.codecogs.com/svg.image?i_{R_\pi}(t)-i_{L_1}(t)=0," />
+- for node <img src="https://latex.codecogs.com/svg.image?v_{4}" title="https://latex.codecogs.com/svg.image?v_{4}" />: <img src="https://latex.codecogs.com/svg.image?i_{L_{1}}(t)-i_{C_{2}}(t)-i_{R_{\ell}}(t)=0." title="https://latex.codecogs.com/svg.image?i_{L_{1}}(t)-i_{C_{2}}(t)-i_{R_{\ell}}(t)=0." />
 
 **Kirchhoff's voltage law**:
-1. <img src="https://latex.codecogs.com/svg.image?V_{s}&space;(t)-V_{R_{s}}&space;(t)&space;-&space;V_{C_{1}}&space;(t)&space;=&space;0" title="https://latex.codecogs.com/svg.image?V_{s} (t)-V_{R_{s}} (t) - V_{C_{1}} (t) = 0" />
-2. <img src="https://latex.codecogs.com/svg.image?V_{R_\pi}&space;(t)&space;&plus;&space;V_{L_{1}}&space;(t)&space;&plus;&space;V_{C_{2}}&space;(t)&space;=&space;0" title="https://latex.codecogs.com/svg.image?V_{R_\pi} (t) + V_{L_{1}} (t) + V_{C_{2}} (t) = 0" />
-3. <img src="https://latex.codecogs.com/svg.image?V_{C_{2}}(t)&space;-&space;V_{R_{\ell}}(t)&space;=&space;0" title="https://latex.codecogs.com/svg.image?V_{C_{2}}(t) - V_{R_{\ell}}(t) = 0" />
+1. <img src="https://latex.codecogs.com/svg.image?V_{s}&space;(t)-V_{R_{s}}&space;(t)&space;-&space;V_{C_{1}}&space;(t)&space;=&space;0," title="https://latex.codecogs.com/svg.image?V_{s} (t)-V_{R_{s}} (t) - V_{C_{1}} (t) = 0," />
+2. <img src="https://latex.codecogs.com/svg.image?V_{R_\pi}&space;(t)&space;&plus;&space;V_{L_{1}}&space;(t)&space;&plus;&space;V_{C_{2}}&space;(t)&space;=&space;0," title="https://latex.codecogs.com/svg.image?V_{R_\pi} (t) + V_{L_{1}} (t) + V_{C_{2}} (t) = 0," />
+3. <img src="https://latex.codecogs.com/svg.image?V_{C_{2}}(t)&space;-&space;V_{R_{\ell}}(t)&space;=&space;0." title="https://latex.codecogs.com/svg.image?V_{C_{2}}(t) - V_{R_{\ell}}(t) = 0." />
 
 Finally, the ODE system is also of the form <img src="https://latex.codecogs.com/svg.image?\dfrac{d}{dt}u(t)=Au(t)&plus;f(t)" title="https://latex.codecogs.com/svg.image?\dfrac{d}{dt}u(t)=Au(t)+f(t)" /> with coefficient matrix and right-hand side:
 
@@ -166,13 +166,13 @@ The battery drain model is an example for internal switch. Switching is a discre
 To model this first state of the battery drain model, Kirchhoff's laws can be used again.
 
 **Kirchhoff's current law**:
-- for node <img src="https://latex.codecogs.com/svg.image?v_{0}" title="https://latex.codecogs.com/svg.image?v_{0}" />: <img src="https://latex.codecogs.com/svg.image?i_{V_s}(t)=i_{R_s}(t)" title="https://latex.codecogs.com/svg.image?i_{V_s}(t)=i_{R_s}(t)" />
-- for node <img src="https://latex.codecogs.com/svg.image?v_{1}" title="https://latex.codecogs.com/svg.image?v_{1}" />: <img src="https://latex.codecogs.com/svg.image?i_{R_s}(t)=i_L(t)" title="https://latex.codecogs.com/svg.image?i_{R_s}(t)=i_L(t)" />
-- for node <img src="https://latex.codecogs.com/svg.image?v_{2}" title="https://latex.codecogs.com/svg.image?v_{2}" />: <img src="https://latex.codecogs.com/svg.image?i_L(t)&space;=&space;0" title="https://latex.codecogs.com/svg.image?i_L(t) = 0" />
-- for node <img src="https://latex.codecogs.com/svg.image?v_{3}" title="https://latex.codecogs.com/svg.image?v_{3}" />: <img src="https://latex.codecogs.com/svg.image?i_C&space;(t)&plus;i_R(t)=0" title="https://latex.codecogs.com/svg.image?i_C (t)+i_R(t)=0" />
+- for node <img src="https://latex.codecogs.com/svg.image?v_{0}" title="https://latex.codecogs.com/svg.image?v_{0}" />: <img src="https://latex.codecogs.com/svg.image?i_{V_s}(t)=i_{R_s}(t)," title="https://latex.codecogs.com/svg.image?i_{V_s}(t)=i_{R_s}(t)," />
+- for node <img src="https://latex.codecogs.com/svg.image?v_{1}" title="https://latex.codecogs.com/svg.image?v_{1}" />: <img src="https://latex.codecogs.com/svg.image?i_{R_s}(t)=i_L(t)," title="https://latex.codecogs.com/svg.image?i_{R_s}(t)=i_L(t)," />
+- for node <img src="https://latex.codecogs.com/svg.image?v_{2}" title="https://latex.codecogs.com/svg.image?v_{2}" />: <img src="https://latex.codecogs.com/svg.image?i_L(t)&space;=&space;0," title="https://latex.codecogs.com/svg.image?i_L(t) = 0," />
+- for node <img src="https://latex.codecogs.com/svg.image?v_{3}" title="https://latex.codecogs.com/svg.image?v_{3}" />: <img src="https://latex.codecogs.com/svg.image?i_C&space;(t)&plus;i_R(t)=0." title="https://latex.codecogs.com/svg.image?i_C (t)+i_R(t)=0." />
 
 **Kirchhoff's voltage law**:
-1. <img src="https://latex.codecogs.com/svg.image?V_C(t)=V_R(t)" title="https://latex.codecogs.com/svg.image?V_C(t)=V_R(t)" />
+1. <img src="https://latex.codecogs.com/svg.image?V_C(t)=V_R(t)." title="https://latex.codecogs.com/svg.image?V_C(t)=V_R(t)." />
 
 The resulting homogeneous ODE system consists only of two ODE's for the current on inductor <img src="https://latex.codecogs.com/svg.image?i_L" title="https://latex.codecogs.com/svg.image?i_L" /> and for the voltage of capacitor <img src="https://latex.codecogs.com/svg.image?V_C" title="https://latex.codecogs.com/svg.image?V_C" />. It has the form of <img src="https://latex.codecogs.com/svg.image?\dfrac{d}{dt}u(t)=Au(t)" title="https://latex.codecogs.com/svg.image?\dfrac{d}{dt}u(t)=Au(t)" />, where
 
@@ -192,13 +192,13 @@ The second state of the battery drain model, where voltage is provided by the so
 </p>
 
 **Kirchhoff's current law**:
-- for node <img src="https://latex.codecogs.com/svg.image?v_{0}" title="https://latex.codecogs.com/svg.image?v_{0}" />: <img src="https://latex.codecogs.com/svg.image?i_{V_s}(t)=i_{R_s}(t)" title="https://latex.codecogs.com/svg.image?i_{V_s}(t)=i_{R_s}(t)" />
-- for node <img src="https://latex.codecogs.com/svg.image?v_{1}" title="https://latex.codecogs.com/svg.image?v_{1}" />: i_{R_s}(t)=i_L(t)
-- for node <img src="https://latex.codecogs.com/svg.image?v_{2}" title="https://latex.codecogs.com/svg.image?v_{2}" />: <img src="https://latex.codecogs.com/svg.image?i_L(t)&space;=&space;i_R(t)" title="https://latex.codecogs.com/svg.image?i_L(t) = i_R(t)" />
-- for node <img src="https://latex.codecogs.com/svg.image?v_{3}" title="https://latex.codecogs.com/svg.image?v_{3}" />: <img src="https://latex.codecogs.com/svg.image?i_C&space;(t)=0" title="https://latex.codecogs.com/svg.image?i_C (t)=0" />
+- for node <img src="https://latex.codecogs.com/svg.image?v_{0}" title="https://latex.codecogs.com/svg.image?v_{0}" />: <img src="https://latex.codecogs.com/svg.image?i_{V_s}(t)=i_{R_s}(t)," title="https://latex.codecogs.com/svg.image?i_{V_s}(t)=i_{R_s}(t)," />
+- for node <img src="https://latex.codecogs.com/svg.image?v_{1}" title="https://latex.codecogs.com/svg.image?v_{1}" />: <img src="https://latex.codecogs.com/svg.image?i_{R_{s}}(t)&space;=&space;i_L(t)," title="https://latex.codecogs.com/svg.image?i_{R_{s}}(t) = i_L(t)," />
+- for node <img src="https://latex.codecogs.com/svg.image?v_{2}" title="https://latex.codecogs.com/svg.image?v_{2}" />: <img src="https://latex.codecogs.com/svg.image?i_L(t)&space;=&space;i_R(t)," title="https://latex.codecogs.com/svg.image?i_L(t) = i_R(t)," />
+- for node <img src="https://latex.codecogs.com/svg.image?v_{3}" title="https://latex.codecogs.com/svg.image?v_{3}" />: <img src="https://latex.codecogs.com/svg.image?i_C&space;(t)=0." title="https://latex.codecogs.com/svg.image?i_C (t)=0." />
 
 **Kirchhoff's voltage law**:
-1. <img src="https://latex.codecogs.com/svg.image?V_s&space;(t)=V_{R_s}(t)&plus;V_L(t)&plus;V_R(t)" title="https://latex.codecogs.com/svg.image?V_s (t)=V_{R_s}(t)+V_L(t)+V_R(t)" />
+1. <img src="https://latex.codecogs.com/svg.image?V_s&space;(t)=V_{R_s}(t)&plus;V_L(t)&plus;V_R(t)." title="https://latex.codecogs.com/svg.image?V_s (t)=V_{R_s}(t)+V_L(t)+V_R(t)." />
 
 This yields the nonhomogeneous ODE system of the form <img src="https://latex.codecogs.com/svg.image?\dfrac{d}{dt}u(t)=Au(t)&plus;f(t)" title="https://latex.codecogs.com/svg.image?\dfrac{d}{dt}u(t)=Au(t)+f(t)" /> with settings:
 
