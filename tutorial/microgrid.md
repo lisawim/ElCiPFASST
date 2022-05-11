@@ -69,6 +69,12 @@ In a simulation, the interesting values are the voltages of the capacitors and t
 2. <img src="https://latex.codecogs.com/svg.image?V_{C_{1}}&space;(t)&space;-&space;V_{R_{\pi}}(t)&space;-&space;V_{L_{\pi}}&space;(t)&space;-&space;V_{C_{2}}&space;(t)&space;=&space;0," title="https://latex.codecogs.com/svg.image?V_{C_{1}} (t) - V_{R_{\pi}}(t) - V_{L_{\pi}} (t) - V_{C_{2}} (t) = 0," />
 3. <img src="https://latex.codecogs.com/svg.image?V_{C_{2}}(t)&space;-&space;V_{R_{\ell}}(t)&space;=&space;0." title="https://latex.codecogs.com/svg.image?V_{C_{2}}(t) - V_{R_{\ell}}(t) = 0." />
 
+In order to get differential equations for the three values <img src="https://latex.codecogs.com/svg.image?V_{C_1},&space;V_{C_2},&space;i_{L_\pi}" title="https://latex.codecogs.com/svg.image?V_{C_1}, V_{C_2}, i_{L_\pi}" />, these laws are used:
+
+<p align="center">
+  <img src="https://latex.codecogs.com/svg.image?\dfrac{d}{dt}u_{1}(t)=\dfrac{d}{dt}&space;V_{C_1}(t)\stackrel{CVR}{=}\dfrac{1}{C_{1}}y_1&space;(t)=\dfrac{1}{C_1}i_{C_1}(t)\stackrel{KCL}{=}\dfrac{1}{C_1}\left[i_{R_s}(t)-i_{R_{\pi}}(t)\right]\stackrel{KCL}{=}\dfrac{1}{C_1}\left[i_{R_s}(t)-i_{L_{\pi}}(t)\right]\stackrel{CVR}{=}\dfrac{1}{C_1}\left[\dfrac{V_{R_s}(t)}{R_s}-x_3(t)\right]\stackrel{KVL}{=}\dfrac{1}{C_1}\left[\dfrac{V_s&space;(t)-V_{C_1}(t)}{R_s}-x_3&space;(t)\right]=\dfrac{1}{C_1}\left[\dfrac{V_s&space;(t)-x_{1}(t)}{R_s}-x_3&space;(t)\right]," title="https://latex.codecogs.com/svg.image?\dfrac{d}{dt}u_{1}(t)=\dfrac{d}{dt} V_{C_1}(t)\stackrel{CVR}{=}\dfrac{1}{C_{1}}y_1 (t)=\dfrac{1}{C_1}i_{C_1}(t)\stackrel{KCL}{=}\dfrac{1}{C_1}\left[i_{R_s}(t)-i_{R_{\pi}}(t)\right]\stackrel{KCL}{=}\dfrac{1}{C_1}\left[i_{R_s}(t)-i_{L_{\pi}}(t)\right]\stackrel{CVR}{=}\dfrac{1}{C_1}\left[\dfrac{V_{R_s}(t)}{R_s}-x_3(t)\right]\stackrel{KVL}{=}\dfrac{1}{C_1}\left[\dfrac{V_s (t)-V_{C_1}(t)}{R_s}-x_3 (t)\right]=\dfrac{1}{C_1}\left[\dfrac{V_s (t)-x_{1}(t)}{R_s}-x_3 (t)\right]," />
+</p>
+
 Then, the ODE system for modelling the Pi-model line is of the form <img src="https://latex.codecogs.com/svg.image?\dfrac{d}{dt}u(t)=Au(t)&plus;f(t)" title="https://latex.codecogs.com/svg.image?\dfrac{d}{dt}u(t)=Au(t)+f(t)" />  with:
 
 <p align="center">
