@@ -174,7 +174,7 @@ To model this first state of the battery drain model, Kirchhoff's laws can be us
 **Kirchhoff's voltage law**:
 1. <img src="https://latex.codecogs.com/svg.image?V_C(t)=V_R(t)" title="https://latex.codecogs.com/svg.image?V_C(t)=V_R(t)" />
 
-The resulting ODE system consists only of two ODE's for the current on inductor <img src="https://latex.codecogs.com/svg.image?i_L" title="https://latex.codecogs.com/svg.image?i_L" /> and for the voltage of capacitor <img src="https://latex.codecogs.com/svg.image?V_C" title="https://latex.codecogs.com/svg.image?V_C" />. It has the form of <img src="https://latex.codecogs.com/svg.image?\dfrac{d}{dt}u(t)=Au(t)" title="https://latex.codecogs.com/svg.image?\dfrac{d}{dt}u(t)=Au(t)" />, where
+The resulting homogeneous ODE system consists only of two ODE's for the current on inductor <img src="https://latex.codecogs.com/svg.image?i_L" title="https://latex.codecogs.com/svg.image?i_L" /> and for the voltage of capacitor <img src="https://latex.codecogs.com/svg.image?V_C" title="https://latex.codecogs.com/svg.image?V_C" />. It has the form of <img src="https://latex.codecogs.com/svg.image?\dfrac{d}{dt}u(t)=Au(t)" title="https://latex.codecogs.com/svg.image?\dfrac{d}{dt}u(t)=Au(t)" />, where
 
 <p align="center">
   <img src="https://latex.codecogs.com/svg.image?A=\begin{pmatrix}&space;&space;&space;&space;0&space;&&space;0\\&space;&space;&space;&space;0&space;&&space;-1/(CR)&space;\\&space;&space;&space;&space;\end{pmatrix}" title="https://latex.codecogs.com/svg.image?A=\begin{pmatrix} 0 & 0\\ 0 & -1/(CR) \\ \end{pmatrix}" />
@@ -184,6 +184,34 @@ and
   <p align="center">
     <img src="https://latex.codecogs.com/svg.image?u(t)=\begin{pmatrix}&space;i_{L}(t)\\&space;V_{C}(t)\end{pmatrix}." title="https://latex.codecogs.com/svg.image?u(t)=\begin{pmatrix} i_{L}(t)\\ V_{C}(t)\end{pmatrix}." />
   </p>
+  
+The second state of the battery drain model, where voltage is provided by the source, has the switch states <img src="https://latex.codecogs.com/svg.image?S_V&space;=&space;1,&space;S_C&space;=&space;0" title="https://latex.codecogs.com/svg.image?S_V = 1, S_C = 0" />:
+
+<p align="center">
+  <img width = "600" height = "350" src="battery_second_state.png">
+</p>
+
+**Kirchhoff's current law**:
+- for node <img src="https://latex.codecogs.com/svg.image?v_{0}" title="https://latex.codecogs.com/svg.image?v_{0}" />: <img src="https://latex.codecogs.com/svg.image?i_{V_s}(t)=i_{R_s}(t)" title="https://latex.codecogs.com/svg.image?i_{V_s}(t)=i_{R_s}(t)" />
+- for node <img src="https://latex.codecogs.com/svg.image?v_{1}" title="https://latex.codecogs.com/svg.image?v_{1}" />: i_{R_s}(t)=i_L(t)
+- for node <img src="https://latex.codecogs.com/svg.image?v_{2}" title="https://latex.codecogs.com/svg.image?v_{2}" />: <img src="https://latex.codecogs.com/svg.image?i_L(t)&space;=&space;i_R(t)" title="https://latex.codecogs.com/svg.image?i_L(t) = i_R(t)" />
+- for node <img src="https://latex.codecogs.com/svg.image?v_{3}" title="https://latex.codecogs.com/svg.image?v_{3}" />: <img src="https://latex.codecogs.com/svg.image?i_C&space;(t)=0" title="https://latex.codecogs.com/svg.image?i_C (t)=0" />
+
+**Kirchhoff's voltage law**:
+1. <img src="https://latex.codecogs.com/svg.image?V_s&space;(t)=V_{R_s}(t)&plus;V_L(t)&plus;V_R(t)" title="https://latex.codecogs.com/svg.image?V_s (t)=V_{R_s}(t)+V_L(t)+V_R(t)" />
+
+This yields the nonhomogeneous ODE system of the form <img src="https://latex.codecogs.com/svg.image?\dfrac{d}{dt}u(t)=Au(t)&plus;f(t)" title="https://latex.codecogs.com/svg.image?\dfrac{d}{dt}u(t)=Au(t)+f(t)" /> with settings:
+
+<p align="center">
+  <img src="https://latex.codecogs.com/svg.image?A=\begin{pmatrix}&space;&space;&space;&space;-(R_s&space;&plus;&space;R)/L&space;&&space;0&space;\\&space;&space;&space;&space;0&space;&&space;0&space;\\&space;&space;&space;&space;\end{pmatrix},\,\,f(t)=\begin{pmatrix}&space;&space;&space;&space;V_{s}/L\\&space;&space;&space;&space;0\\&space;&space;&space;&space;\end{pmatrix}" title="https://latex.codecogs.com/svg.image?A=\begin{pmatrix} -(R_s + R)/L & 0 \\ 0 & 0 \\ \end{pmatrix},\,\,f(t)=\begin{pmatrix} V_{s}/L\\ 0\\ \end{pmatrix}" />
+</p>
+
+and solution vector
+
+<p align="center">
+  <img src="https://latex.codecogs.com/svg.image?u(t)=\begin{pmatrix}&space;i_{L}(t)\\&space;V_{C}(t)\end{pmatrix}." title="https://latex.codecogs.com/svg.image?u(t)=\begin{pmatrix} i_{L}(t)\\ V_{C}(t)\end{pmatrix}." />
+</p>
+
 
 ## 3. Control
 In the last section about the buck converter, the circuit can be in two different states. A few questions arise: Which state is the current state? When does the converter switch to the other state? In order to answer these questions and learn a little bit more about the functionality of a DC microgrid, this section deals with the controlling of the output voltage. Remember that the buck converter reduces the input voltage. Moreover, it can reduce the input voltage to a target output voltage. The controller can realise this via comparing the actual output voltage with a desired output value in every time step.
