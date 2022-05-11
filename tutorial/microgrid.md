@@ -163,6 +163,28 @@ The battery drain model is an example for internal switch. Switching is a discre
   <img width = "600" height = "350" src="battery_first_state.png">
 </p>
 
+To model this first state of the battery drain model, Kirchhoff's laws can be used again.
+
+**Kirchhoff's current law**:
+- for node <img src="https://latex.codecogs.com/svg.image?v_{0}" title="https://latex.codecogs.com/svg.image?v_{0}" />: <img src="https://latex.codecogs.com/svg.image?i_{V_s}(t)=i_{R_s}(t)" title="https://latex.codecogs.com/svg.image?i_{V_s}(t)=i_{R_s}(t)" />
+- for node <img src="https://latex.codecogs.com/svg.image?v_{1}" title="https://latex.codecogs.com/svg.image?v_{1}" />: <img src="https://latex.codecogs.com/svg.image?i_{R_s}(t)=i_L(t)" title="https://latex.codecogs.com/svg.image?i_{R_s}(t)=i_L(t)" />
+- for node <img src="https://latex.codecogs.com/svg.image?v_{2}" title="https://latex.codecogs.com/svg.image?v_{2}" />: <img src="https://latex.codecogs.com/svg.image?i_L(t)&space;=&space;0" title="https://latex.codecogs.com/svg.image?i_L(t) = 0" />
+- for node <img src="https://latex.codecogs.com/svg.image?v_{3}" title="https://latex.codecogs.com/svg.image?v_{3}" />: <img src="https://latex.codecogs.com/svg.image?i_C&space;(t)&plus;i_R(t)=0" title="https://latex.codecogs.com/svg.image?i_C (t)+i_R(t)=0" />
+
+**Kirchhoff's voltage law**:
+1. <img src="https://latex.codecogs.com/svg.image?V_C(t)=V_R(t)" title="https://latex.codecogs.com/svg.image?V_C(t)=V_R(t)" />
+
+The resulting ODE system consists only of two ODE's for the current on inductor <img src="https://latex.codecogs.com/svg.image?i_L" title="https://latex.codecogs.com/svg.image?i_L" /> and for the voltage of capacitor <img src="https://latex.codecogs.com/svg.image?V_C" title="https://latex.codecogs.com/svg.image?V_C" />. It has the form of <img src="https://latex.codecogs.com/svg.image?\dfrac{d}{dt}u(t)=Au(t)" title="https://latex.codecogs.com/svg.image?\dfrac{d}{dt}u(t)=Au(t)" />, where
+
+<p align="center">
+  <img src="https://latex.codecogs.com/svg.image?A=\begin{pmatrix}&space;&space;&space;&space;0&space;&&space;0\\&space;&space;&space;&space;0&space;&&space;-1/(CR)&space;\\&space;&space;&space;&space;\end{pmatrix}" title="https://latex.codecogs.com/svg.image?A=\begin{pmatrix} 0 & 0\\ 0 & -1/(CR) \\ \end{pmatrix}" />
+</p>
+
+and
+  <p align="center">
+    <img src="https://latex.codecogs.com/svg.image?u(t)=\begin{pmatrix}&space;i_{L}(t)\\&space;V_{C}(t)\end{pmatrix}." title="https://latex.codecogs.com/svg.image?u(t)=\begin{pmatrix} i_{L}(t)\\ V_{C}(t)\end{pmatrix}." />
+  </p>
+
 ## 3. Control
 In the last section about the buck converter, the circuit can be in two different states. A few questions arise: Which state is the current state? When does the converter switch to the other state? In order to answer these questions and learn a little bit more about the functionality of a DC microgrid, this section deals with the controlling of the output voltage. Remember that the buck converter reduces the input voltage. Moreover, it can reduce the input voltage to a target output voltage. The controller can realise this via comparing the actual output voltage with a desired output value in every time step.
 
