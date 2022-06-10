@@ -1,4 +1,3 @@
-# Application
-The project aims the implementation of the components of the microgrid, and the microgrid itself, in pySDC. Better simulation in view of good accuracy and efficient runtimes requires further handling. 
+# Switch detection
 
-## Switch detection
+In order to work with SDC and PFASST, a switch detection have to implemented. When the capacitor voltage drops below a reference value, a signal should be outputted. In mathematical words: Let <img src="https://latex.codecogs.com/svg.image?V_C(t)" title="https://latex.codecogs.com/svg.image?V_C(t)" /> be the time-dependent capacitor voltage and <img src="https://latex.codecogs.com/svg.image?V_{ref}" title="https://latex.codecogs.com/svg.image?V_{ref}" /> be the reference value as in the tutorial. When <img src="https://latex.codecogs.com/svg.image?V_C(t)-V_{ref}<0" title="https://latex.codecogs.com/svg.image?V_C(t)-V_{ref}<0" /> for time <img src="https://latex.codecogs.com/svg.image?t" title="https://latex.codecogs.com/svg.image?t" />, then a signal is expected. In this case, a switch detection starts. 
